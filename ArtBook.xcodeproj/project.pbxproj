@@ -14,6 +14,7 @@
 		D8A1143B29144BBF00AE01AE /* ArtBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8A1143929144BBF00AE01AE /* ArtBook.xcdatamodeld */; };
 		D8A1143D29144BBF00AE01AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A1143C29144BBF00AE01AE /* Assets.xcassets */; };
 		D8A1144029144BBF00AE01AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A1143E29144BBF00AE01AE /* LaunchScreen.storyboard */; };
+		D8A1144829144F3B00AE01AE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1144729144F3B00AE01AE /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D8A1143C29144BBF00AE01AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A1143F29144BBF00AE01AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A1144129144BBF00AE01AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A1144729144F3B00AE01AE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D8A1143029144BBF00AE01AE /* AppDelegate.swift */,
 				D8A1143229144BBF00AE01AE /* SceneDelegate.swift */,
 				D8A1143429144BBF00AE01AE /* ViewController.swift */,
+				D8A1144729144F3B00AE01AE /* DetailsViewController.swift */,
 				D8A1143629144BBF00AE01AE /* Main.storyboard */,
 				D8A1143C29144BBF00AE01AE /* Assets.xcassets */,
 				D8A1143E29144BBF00AE01AE /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				D8A1143129144BBF00AE01AE /* AppDelegate.swift in Sources */,
 				D8A1143B29144BBF00AE01AE /* ArtBook.xcdatamodeld in Sources */,
 				D8A1143329144BBF00AE01AE /* SceneDelegate.swift in Sources */,
+				D8A1144829144F3B00AE01AE /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
