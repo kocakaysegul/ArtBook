@@ -23,9 +23,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        getData()
     }
     
-    func getData() {
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name(rawValue: "newData"), object: nil)
+    }
+    
+    @objc func getData() {
+        
+        //We remove the duplication problem by resetting these arrays
+        nameArray.removeAll(keepingCapacity: false)
+        idArray.removeAll(keepingCapacity: false)
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -52,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
 
         } catch {
-                    print("error")
+            print("error")
         }
     }
     

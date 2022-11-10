@@ -31,6 +31,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         imageView.addGestureRecognizer(imageTabRecognizer)
     }
     
+    
+    
     @objc func selectImage() {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -72,6 +74,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         } catch {
             print("Error saving!")
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
+        self.navigationController?.popViewController(animated: true)
+        
+        
     }
     
 
