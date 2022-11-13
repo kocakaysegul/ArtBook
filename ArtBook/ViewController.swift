@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var nameArray = [String]()
     var idArray = [UUID]()
+    
     var selectedPainting = ""
     var selectedPaintingId : UUID?
     
@@ -75,6 +76,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = nameArray[indexPath.row]
+        return cell
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC" {
             let destinationVC = segue.destination as! DetailsViewController
@@ -87,18 +99,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         selectedPainting = nameArray[indexPath.row]
         selectedPaintingId = idArray[indexPath.row]
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nameArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = nameArray[indexPath.row]
-        return cell
     }
 
 
