@@ -14,6 +14,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var yearTextField: UITextField!
     @IBOutlet weak var artistTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
     
     var chosenPainting = ""
     var chosenPaintingId : UUID?
@@ -24,6 +26,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Do any additional setup after loading the view.
         
         if chosenPainting != "" {
+            
+            saveButton.isHidden = true
+            
             //Core Data
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
@@ -59,6 +64,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             
         } else {
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
             nameTextField.text = ""
             artistTextField.text = ""
             yearTextField.text = ""
@@ -88,6 +95,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.editedImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     

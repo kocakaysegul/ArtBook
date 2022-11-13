@@ -105,6 +105,7 @@
                         <outlet property="artistTextField" destination="yQu-uR-O26" id="A2q-Zr-O3p"/>
                         <outlet property="imageView" destination="Agb-Cz-SwD" id="uj5-TG-GWt"/>
                         <outlet property="nameTextField" destination="RRF-Y3-3H9" id="uQs-uH-UqE"/>
+                        <outlet property="saveButton" destination="bL7-Ni-P4W" id="Vyx-St-yG8"/>
                         <outlet property="yearTextField" destination="yQu-uR-O26" id="3AX-3B-WaR"/>
                     </connections>
                 </viewController>
